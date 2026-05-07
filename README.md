@@ -79,7 +79,7 @@ lib/
 
 ```bash
 # 1. Extract the zip and navigate into the project
-cd internshipproject
+cd praktix
 
 # 2. Install dependencies
 flutter pub get
