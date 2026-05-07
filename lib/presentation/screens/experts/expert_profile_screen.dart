@@ -112,7 +112,7 @@ class ExpertProfileScreen extends ConsumerWidget {
           ...state.programs.asMap().entries.map((e) => Padding(padding: const EdgeInsets.only(bottom: 12), child: ProgramCard(program: e.value, animationIndex: e.key))),
 
           const SizedBox(height: 24),
-          CustomButton(label: 'Apply for a Program', icon: Icons.arrow_forward_rounded, onPressed: () => context.push('/apply')).animate(delay: 200.ms).fadeIn(),
+          CustomButton(label: 'Apply for a Program', icon: Icons.arrow_forward_rounded, onPressed: () => context.go('/apply')).animate(delay: 200.ms).fadeIn(),
           const SizedBox(height: 32),
         ]),
       ),

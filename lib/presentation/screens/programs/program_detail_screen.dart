@@ -130,7 +130,7 @@ class ProgramDetailScreen extends ConsumerWidget {
                 Text(program.duration, style: AppTextStyles.bodySmall(color: isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight)),
               ]),
               const SizedBox(width: 16),
-              Expanded(child: CustomButton(label: 'Apply Now', icon: Icons.arrow_forward_rounded, onPressed: () => context.push('/apply?programId=${program.id}'))),
+              Expanded(child: CustomButton(label: 'Apply Now', icon: Icons.arrow_forward_rounded, onPressed: () => context.go('/apply?programId=${program.id}'))),
             ]),
           ).animate().slideY(begin: 0.5, end: 0, duration: 400.ms),
         ),

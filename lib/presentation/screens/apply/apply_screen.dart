@@ -61,7 +61,10 @@ class _ApplyScreenState extends ConsumerState<ApplyScreen> {
         title: Text('Apply Now', style: GoogleFonts.poppins(fontWeight: FontWeight.w700, fontSize: 20, color: isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight)),
         backgroundColor: isDark ? AppColors.surfaceDark : AppColors.surfaceLight,
         elevation: 0,
-        leading: GestureDetector(onTap: () => context.pop(), child: const Icon(Icons.arrow_back_rounded)),
+        leading: GestureDetector(
+          onTap: () => context.canPop() ? context.pop() : context.go('/'),
+          child: const Icon(Icons.arrow_back_rounded),
+        ),
         bottom: PreferredSize(preferredSize: const Size.fromHeight(1), child: Divider(height: 1, color: isDark ? AppColors.borderDark : AppColors.borderLight)),
       ),
       body: SingleChildScrollView(

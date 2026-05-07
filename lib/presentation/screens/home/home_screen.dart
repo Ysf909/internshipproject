@@ -64,7 +64,7 @@ class HomeScreen extends ConsumerWidget {
                       const SizedBox(height: 32),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: SectionHeader(title: 'Featured Programs', subtitle: 'Hand-picked by our team', actionLabel: 'See all', onAction: () => context.push('/programs')),
+                        child: SectionHeader(title: 'Featured Programs', subtitle: 'Hand-picked by our team', actionLabel: 'See all', onAction: () => context.go('/programs')),
                       ),
                       const SizedBox(height: 16),
                       SizedBox(
@@ -131,13 +131,13 @@ class _HeroSection extends StatelessWidget {
         const SizedBox(height: 20),
         Row(children: [
           Expanded(child: ElevatedButton(
-            onPressed: () => context.push('/programs'),
+            onPressed: () => context.go('/programs'),
             style: ElevatedButton.styleFrom(backgroundColor: Colors.white, foregroundColor: AppColors.primary, elevation: 0, padding: const EdgeInsets.symmetric(vertical: 12), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
             child: Text('Explore Programs', style: GoogleFonts.poppins(fontWeight: FontWeight.w700, fontSize: 14)),
           )),
           const SizedBox(width: 10),
           Expanded(child: OutlinedButton(
-            onPressed: () => context.push('/apply'),
+            onPressed: () => context.go('/apply'),
             style: OutlinedButton.styleFrom(foregroundColor: Colors.white, side: const BorderSide(color: Colors.white, width: 1.5), padding: const EdgeInsets.symmetric(vertical: 12), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
             child: Text('Apply Now', style: GoogleFonts.poppins(fontWeight: FontWeight.w600, fontSize: 14)),
           )),
@@ -215,7 +215,7 @@ class _CTABanner extends StatelessWidget {
         const SizedBox(height: 6),
         Text('Join 1,200+ professionals who transformed their careers with Praktix.', style: AppTextStyles.bodyMedium()),
         const SizedBox(height: 16),
-        CustomButton(label: 'Apply for Free', icon: Icons.arrow_forward_rounded, onPressed: () => context.push('/apply'), width: 200),
+        CustomButton(label: 'Apply for Free', icon: Icons.arrow_forward_rounded, onPressed: () => context.go('/apply'), width: 200),
       ]),
     ).animate().fadeIn(duration: 500.ms);
   }
