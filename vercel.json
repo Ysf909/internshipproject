@@ -1,8 +1,11 @@
 {
   "buildCommand": "bash vercel_build.sh",
   "outputDirectory": "build/web",
-  "installCommand": "echo 'Flutter install handled by build script'",
+  "installCommand": "echo skip",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/((?!.*\\.(?:js|css|wasm|png|jpg|ico|json|html|map|ttf|woff|woff2|svg|gif|webp)).+)",
+      "destination": "/index.html"
+    }
   ]
 }
