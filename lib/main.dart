@@ -21,7 +21,7 @@ class PraktixApp extends ConsumerWidget {
     final isDark = ref.watch(themeProvider);
 
     return MaterialApp.router(
-      title: 'Praktix',
+      title: 'Praktix University',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,

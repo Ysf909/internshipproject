@@ -19,7 +19,7 @@ class ProgramsScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: isDark ? AppColors.backgroundDark : AppColors.backgroundLight,
       appBar: AppBar(
-        title: Text('Programs', style: GoogleFonts.poppins(fontWeight: FontWeight.w700, fontSize: 20, color: isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight)),
+        title: Text('Degrees & Certificates', style: GoogleFonts.poppins(fontWeight: FontWeight.w700, fontSize: 18, color: isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight)),
         backgroundColor: isDark ? AppColors.surfaceDark : AppColors.surfaceLight,
         elevation: 0,
         bottom: PreferredSize(preferredSize: const Size.fromHeight(1), child: Divider(height: 1, color: isDark ? AppColors.borderDark : AppColors.borderLight)),

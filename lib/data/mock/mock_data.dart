@@ -4,299 +4,332 @@ import '../models/expert_model.dart';
 class MockData {
   MockData._();
 
-  // ── Experts ──────────────────────────────────────────────
   static final List<Expert> experts = [
     Expert(
       id: 'exp_01',
       name: 'Dr. Sarah Chen',
-      title: 'Lead Data Scientist',
+      title: 'Professor of AI & Data Science',
       company: 'Google DeepMind',
       experienceYears: 12,
       specializations: ['Machine Learning', 'Python', 'Deep Learning', 'NLP'],
       bio:
-          'Dr. Sarah Chen is a leading Data Scientist with 12+ years of experience at Google DeepMind. '
-          'She holds a PhD in Computer Science from MIT and has published over 30 peer-reviewed papers '
-          'on machine learning and AI. Sarah has mentored over 800 students globally and is passionate '
-          'about making data science accessible to everyone.',
+          'Dr. Sarah Chen leads the AI & Data Science faculty at Praktix University. With 12+ years at Google DeepMind, a PhD from MIT, and 30+ peer-reviewed publications, she brings world-class research into every sprint. Her philosophy: learn by doing, grow by teaching others.',
       imageUrl: 'https://randomuser.me/api/portraits/women/44.jpg',
       rating: 4.9,
-      totalStudents: 842,
-      programIds: ['prog_01'],
+      totalStudents: 1842,
+      programIds: ['prog_01', 'prog_07'],
       linkedIn: 'https://linkedin.com/in/sarahchen',
     ),
     Expert(
       id: 'exp_02',
       name: 'Ahmed Al-Hassan',
-      title: 'Senior Flutter Engineer',
+      title: 'Associate Professor, Mobile Engineering',
       company: 'Meta',
       experienceYears: 8,
       specializations: ['Flutter', 'Dart', 'Mobile Architecture', 'Firebase'],
       bio:
-          'Ahmed is a Senior Mobile Engineer at Meta with 8 years of experience building production '
-          'mobile applications used by millions. He is a Flutter GDE (Google Developer Expert) and '
-          'has contributed to multiple open-source packages. His teaching style focuses on real-world '
-          'architecture and shipping apps that scale.',
+          'Ahmed is a Flutter GDE and Associate Professor at Praktix University. With 8 years shipping production apps at Meta, his courses bridge academic rigour and industrial practice. Students publish four complete apps to real app stores during the program.',
       imageUrl: 'https://randomuser.me/api/portraits/men/32.jpg',
       rating: 4.8,
-      totalStudents: 1240,
+      totalStudents: 2140,
       programIds: ['prog_02'],
       linkedIn: 'https://linkedin.com/in/ahmedhassan',
     ),
     Expert(
       id: 'exp_03',
       name: 'Maria Rodriguez',
-      title: 'Senior Product Manager',
+      title: 'Dean of Business & Entrepreneurship',
       company: 'Spotify',
       experienceYears: 10,
-      specializations: ['Product Strategy', 'Agile', 'User Research', 'OKRs'],
+      specializations: ['Product Strategy', 'Agile', 'User Research', 'Entrepreneurship'],
       bio:
-          'Maria is a Senior PM at Spotify with 10 years of experience launching products used by '
-          '500M+ users. She previously led product teams at Airbnb and has an MBA from Stanford. '
-          'Maria brings a founder mindset to product management and teaches frameworks that actually '
-          'work in fast-paced environments.',
+          'Maria serves as Dean of Business at Praktix University. Formerly Senior PM at Spotify and Airbnb (Stanford MBA), she brings a founder mindset to every sprint. Her Impact MBA cohorts tackle live business challenges with Fortune 500 partners.',
       imageUrl: 'https://randomuser.me/api/portraits/women/68.jpg',
       rating: 4.9,
-      totalStudents: 680,
-      programIds: ['prog_03'],
+      totalStudents: 1280,
+      programIds: ['prog_03', 'prog_08'],
       linkedIn: 'https://linkedin.com/in/mariarodriguez',
     ),
     Expert(
       id: 'exp_04',
       name: 'James Wilson',
-      title: 'Principal UX Designer',
+      title: 'Professor of Human Experience Design',
       company: 'Apple',
       experienceYears: 15,
-      specializations: ['UX Research', 'Figma', 'Design Systems', 'Prototyping'],
+      specializations: ['UX Research', 'Figma', 'Design Systems', 'Interaction Design'],
       bio:
-          'James is a Principal UX Designer at Apple with 15 years of experience shaping iconic '
-          'user experiences. He has led design for products with over 1B users. A Figma ambassador '
-          'and speaker at Config, James combines deep craft with systems thinking to create '
-          'experiences that feel inevitable.',
+          'James is a Principal UX Designer at Apple and Professor of Human Experience at Praktix. 15 years shaping products used by a billion people inform every studio session. At Praktix, design students work in live cross-functional teams—just like the real world.',
       imageUrl: 'https://randomuser.me/api/portraits/men/75.jpg',
       rating: 4.8,
-      totalStudents: 920,
+      totalStudents: 1420,
       programIds: ['prog_04'],
       linkedIn: 'https://linkedin.com/in/jameswilson',
     ),
     Expert(
       id: 'exp_05',
       name: 'Layla Osman',
-      title: 'Growth Marketing Director',
+      title: 'Professor of Marketing & Growth',
       company: 'HubSpot',
       experienceYears: 9,
-      specializations: ['Digital Marketing', 'SEO', 'Paid Media', 'Analytics'],
+      specializations: ['Digital Marketing', 'SEO', 'Paid Media', 'AI Tools'],
       bio:
-          'Layla leads growth marketing at HubSpot, having grown multiple SaaS brands from seed to '
-          'Series C. With experience across SEO, paid media, email, and analytics, she takes a '
-          'data-driven approach to every campaign. She has trained marketing teams at over 50 companies.',
+          'Layla leads the Growth & Marketing faculty at Praktix. A HubSpot Growth Director who has scaled 20+ SaaS brands, she teaches data-driven strategy grounded in the latest tools and ethical frameworks. Her cohorts manage real ad budgets from week one.',
       imageUrl: 'https://randomuser.me/api/portraits/women/55.jpg',
       rating: 4.7,
-      totalStudents: 530,
+      totalStudents: 930,
       programIds: ['prog_05'],
       linkedIn: 'https://linkedin.com/in/laylaosman',
     ),
     Expert(
       id: 'exp_06',
       name: 'Omar Farouq',
-      title: 'Staff Software Engineer',
+      title: 'Professor of Software Engineering',
       company: 'Stripe',
       experienceYears: 11,
       specializations: ['React', 'Node.js', 'System Design', 'TypeScript'],
       bio:
-          'Omar is a Staff Engineer at Stripe, where he architects high-availability payment systems. '
-          'With 11 years in full-stack development, he has built and scaled products handling '
-          'billions in transactions. Omar is a mentor at YC and passionate about teaching '
-          'engineers to think at the systems level.',
+          'Omar is a Staff Engineer at Stripe and Professor of Software Engineering at Praktix. His program ships six production applications and graduates senior-level engineers in 16 weeks, backed by the Praktix Job Guarantee.',
       imageUrl: 'https://randomuser.me/api/portraits/men/62.jpg',
       rating: 4.9,
-      totalStudents: 1100,
+      totalStudents: 2100,
       programIds: ['prog_06'],
       linkedIn: 'https://linkedin.com/in/omarfarouq',
     ),
   ];
 
-  // ── Programs ─────────────────────────────────────────────
   static final List<Program> programs = [
     Program(
       id: 'prog_01',
-      title: 'Data Science & Machine Learning',
+      title: 'B.Sc. Artificial Intelligence & Data Science',
       category: 'Technology',
-      duration: '12 weeks',
-      price: 1299,
+      duration: '24 months',
+      price: 8900,
       imageUrl:
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
+          'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop',
       description:
-          'Master the art and science of data from first principles to cutting-edge ML models. '
-          'This intensive program covers Python, statistical analysis, machine learning algorithms, '
-          'deep learning, and real-world project deployment. You will work on 5+ industry-grade '
-          'projects with datasets from companies like Uber, Netflix, and Spotify. '
-          '\n\nBy graduation, you will have the technical depth and portfolio to land roles as a '
-          'Data Scientist, ML Engineer, or AI Analyst at top-tier companies.',
+          'A fully accredited Bachelor\'s degree that takes you from data fundamentals to frontier AI research. '
+          'Structured in 18 learning sprints, each ending with a 1-on-1 project review with a senior professional. '
+          'No lectures—only curated resources, hands-on projects, and peer review. '
+          '\n\nYou will build a portfolio of 8+ industry-grade projects aligned with the UN SDGs. '
+          '97.9% of our AI graduates secure roles within 6 months.',
       expertId: 'exp_01',
       outcomes: [
-        'Build end-to-end ML pipelines using Python and scikit-learn',
-        'Design and train deep neural networks with TensorFlow & PyTorch',
-        'Apply NLP techniques for text classification and sentiment analysis',
-        'Perform exploratory data analysis using Pandas & NumPy',
-        'Deploy ML models to production with FastAPI and Docker',
-        'Communicate insights effectively with Matplotlib and Tableau',
+        'Build and deploy end-to-end ML pipelines from Python to production',
+        'Design deep neural networks with TensorFlow and PyTorch',
+        'Apply NLP, computer vision, and reinforcement learning to real problems',
+        'Communicate data insights to business stakeholders with confidence',
+        'Lead an AI research sprint aligned with UN Sustainable Development Goals',
+        'Earn an accredited B.Sc. recognized by top tech companies globally',
       ],
-      level: 'Intermediate',
+      level: 'Beginner to Advanced',
       rating: 4.9,
-      totalStudents: 842,
+      totalStudents: 1842,
       isFeatured: true,
-      startDate: 'June 1, 2025',
-      tags: ['Python', 'ML', 'AI', 'Deep Learning', 'Data'],
+      startDate: 'September 1, 2025',
+      tags: ['AI', 'Machine Learning', 'Python', 'Bachelor', 'Accredited'],
     ),
     Program(
       id: 'prog_02',
-      title: 'Flutter Mobile Development',
+      title: 'Certificate: Flutter & Mobile Engineering',
       category: 'Technology',
       duration: '10 weeks',
-      price: 999,
+      price: 1299,
       imageUrl:
           'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop',
       description:
-          'Go from zero to shipping production Flutter apps used by real users. This program covers '
-          'Dart fundamentals, Flutter UI construction, state management with Riverpod and BLoC, '
-          'Clean Architecture, and Firebase integration. '
-          '\n\nYou will build 4 complete apps — a social media clone, an e-commerce app, a fitness '
-          'tracker, and a custom project of your own. Each app ships to the App Store and Play Store.',
+          'Go from zero to shipping production Flutter apps with real users. '
+          'Sprint-based certificate covering Dart, Flutter UI, Riverpod, Clean Architecture, Firebase, and app-store deployment. '
+          '\n\nYou build four complete apps—each reviewed by a senior Flutter GDE. '
+          'Learn at your pace but with sprint deadlines to keep you on track.',
       expertId: 'exp_02',
       outcomes: [
-        'Build pixel-perfect, responsive Flutter UIs for iOS and Android',
-        'Implement state management using Riverpod and BLoC patterns',
-        'Structure projects using Clean Architecture and MVVM',
-        'Integrate REST APIs and real-time data with Firebase',
-        'Write automated widget and unit tests for Flutter apps',
-        'Deploy and publish apps to App Store and Google Play',
+        'Build pixel-perfect responsive Flutter UIs for iOS and Android',
+        'Implement Riverpod and BLoC state management with Clean Architecture',
+        'Integrate REST APIs and real-time Firebase features',
+        'Write automated widget and unit tests',
+        'Publish apps to App Store and Google Play',
+        'Earn the Praktix Flutter Engineering Certificate',
       ],
       level: 'Beginner to Advanced',
       rating: 4.8,
-      totalStudents: 1240,
+      totalStudents: 2140,
       isFeatured: true,
       startDate: 'June 8, 2025',
-      tags: ['Flutter', 'Dart', 'iOS', 'Android', 'Firebase'],
+      tags: ['Flutter', 'Dart', 'Mobile', 'Firebase', 'Certificate'],
     ),
     Program(
       id: 'prog_03',
-      title: 'Product Management Fundamentals',
+      title: 'Impact MBA — Business Innovation & Leadership',
       category: 'Business',
-      duration: '8 weeks',
-      price: 799,
+      duration: '18 months',
+      price: 12500,
       imageUrl:
           'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop',
       description:
-          'Learn to think, speak, and execute like a world-class Product Manager. Covering discovery, '
-          'strategy, prioritization, Agile, metrics, and stakeholder alignment — this program is '
-          'grounded in real practices from Spotify, Airbnb, and Google. '
-          '\n\nYou will build a full product case study from scratch, including user research, '
-          'PRDs, roadmaps, and go-to-market planning.',
+          'An accredited Impact MBA for purpose-driven professionals who want to lead transformation. '
+          'Aligned with UN SDGs, combining business strategy, innovation, leadership, and entrepreneurship '
+          'in live challenges with industry partners. '
+          '\n\nNo traditional exams. Graduate with a full business case portfolio reviewed by Fortune 500 hiring managers.',
       expertId: 'exp_03',
       outcomes: [
-        'Run structured user research to uncover real product opportunities',
-        'Write clear Product Requirements Documents (PRDs)',
-        'Build and prioritize a product roadmap using OKR frameworks',
-        'Lead cross-functional teams using Agile and Scrum',
-        'Define, track, and improve key product metrics',
-        'Ace PM interviews at top tech companies',
-      ],
-      level: 'Beginner',
-      rating: 4.9,
-      totalStudents: 680,
-      isFeatured: true,
-      startDate: 'June 15, 2025',
-      tags: ['Product', 'Strategy', 'Agile', 'OKRs', 'Roadmap'],
-    ),
-    Program(
-      id: 'prog_04',
-      title: 'UX/UI Design Masterclass',
-      category: 'Design',
-      duration: '10 weeks',
-      price: 899,
-      imageUrl:
-          'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=500&fit=crop',
-      description:
-          'Transform your design thinking and craft world-class digital experiences. This program '
-          'covers UX research, information architecture, interaction design, visual design, '
-          'and design systems. You will work in Figma daily, building a portfolio of 3 full '
-          'case studies reviewed by senior designers at Apple and Google. '
-          '\n\nGraduates regularly land roles at top product companies within 3 months.',
-      expertId: 'exp_04',
-      outcomes: [
-        'Conduct user interviews, usability tests, and synthesize findings',
-        'Create wireframes, user flows, and low/high-fidelity prototypes',
-        'Build and maintain scalable design systems in Figma',
-        'Apply visual design principles: typography, color, layout, motion',
-        'Collaborate effectively with engineers in a handoff workflow',
-        'Present design decisions with confidence to stakeholders',
-      ],
-      level: 'Beginner to Intermediate',
-      rating: 4.8,
-      totalStudents: 920,
-      isFeatured: false,
-      startDate: 'June 22, 2025',
-      tags: ['Figma', 'UX', 'UI', 'Design Systems', 'Prototyping'],
-    ),
-    Program(
-      id: 'prog_05',
-      title: 'Digital Marketing Strategy',
-      category: 'Marketing',
-      duration: '6 weeks',
-      price: 599,
-      imageUrl:
-          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop',
-      description:
-          'Master full-funnel digital marketing from brand strategy to performance analytics. '
-          'This program covers SEO, paid media (Google & Meta Ads), email marketing, content '
-          'strategy, and conversion rate optimization. You will manage a real ad budget and '
-          'run live campaigns during the program. '
-          '\n\nIdeal for founders, marketers, and anyone wanting to grow a business online.',
-      expertId: 'exp_05',
-      outcomes: [
-        'Develop a data-driven digital marketing strategy from scratch',
-        'Launch and optimize Google Ads and Meta ad campaigns',
-        'Implement technical and on-page SEO for organic growth',
-        'Build automated email sequences that convert leads to customers',
-        'Analyze campaign performance with Google Analytics 4',
-        'Calculate and improve CAC, ROAS, and LTV',
-      ],
-      level: 'Beginner',
-      rating: 4.7,
-      totalStudents: 530,
-      isFeatured: false,
-      startDate: 'July 1, 2025',
-      tags: ['SEO', 'Ads', 'Email', 'Analytics', 'Growth'],
-    ),
-    Program(
-      id: 'prog_06',
-      title: 'Full-Stack Web Development',
-      category: 'Technology',
-      duration: '16 weeks',
-      price: 1499,
-      imageUrl:
-          'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=500&fit=crop',
-      description:
-          'The most comprehensive full-stack program available. Learn React, TypeScript, Node.js, '
-          'PostgreSQL, and cloud deployment from an engineer who has shipped at scale. '
-          '\n\nYou will build and deploy 6 real applications including a SaaS platform, REST API, '
-          'real-time chat app, and a personal portfolio. The program emphasizes system design, '
-          'performance, and the engineering practices that matter at senior levels.',
-      expertId: 'exp_06',
-      outcomes: [
-        'Build full-stack applications with React, TypeScript and Node.js',
-        'Design and implement RESTful APIs and GraphQL services',
-        'Model relational databases with PostgreSQL and write complex queries',
-        'Deploy applications on AWS with CI/CD pipelines',
-        'Write comprehensive tests with Jest, React Testing Library',
-        'Apply system design principles for scalable architectures',
+        'Lead cross-functional teams using Agile, OKRs, and design thinking',
+        'Develop and pitch a go-to-market strategy for a real business challenge',
+        'Apply sustainability and impact frameworks to business decisions',
+        'Present boardroom-ready cases to senior executives',
+        'Build a global network through collaborative sprints with peers worldwide',
+        'Graduate with an accredited Praktix Impact MBA',
       ],
       level: 'Intermediate',
       rating: 4.9,
-      totalStudents: 1100,
+      totalStudents: 1280,
+      isFeatured: true,
+      startDate: 'October 1, 2025',
+      tags: ['MBA', 'Leadership', 'Entrepreneurship', 'Sustainability', 'Accredited'],
+    ),
+    Program(
+      id: 'prog_04',
+      title: 'M.Sc. Human Experience & Interaction Design',
+      category: 'Design',
+      duration: '12 months',
+      price: 9800,
+      imageUrl:
+          'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=500&fit=crop',
+      description:
+          'An accredited Master\'s in UX, interaction design, and human-centred research. '
+          'Sprints cover user research, service design, accessibility, design systems, and AI-augmented workflows—'
+          'reviewed with senior designers from Apple, Google, and Meta. '
+          '\n\nGraduates lead design teams at top product companies within 3 months.',
+      expertId: 'exp_04',
+      outcomes: [
+        'Conduct research that drives measurable product improvements',
+        'Design end-to-end experiences from discovery to high-fidelity Figma',
+        'Build and maintain scalable design systems',
+        'Apply inclusive, accessible design principles',
+        'Lead critique and design review sessions with stakeholders',
+        'Earn an accredited M.Sc. in Human Experience Design',
+      ],
+      level: 'Intermediate to Advanced',
+      rating: 4.8,
+      totalStudents: 1420,
+      isFeatured: false,
+      startDate: 'September 15, 2025',
+      tags: ['UX', 'Figma', 'Design Systems', "Master's", 'Accredited'],
+    ),
+    Program(
+      id: 'prog_05',
+      title: 'Certificate: AI for Business',
+      category: 'Business',
+      duration: '6 weeks',
+      price: 699,
+      imageUrl:
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop',
+      description:
+          'Master AI tools for work in 6 weeks at 4 hours/week. No coding required. '
+          'You will use ChatGPT, Copilot, and Gemini to automate workflows, analyze data, and create compelling content. '
+          '\n\nFollows the Praktix sprint model: learn → apply → review. '
+          'A capstone project lets you build an AI-powered solution to a real business challenge.',
+      expertId: 'exp_05',
+      outcomes: [
+        'Use generative AI tools effectively and responsibly at work',
+        'Automate repetitive workflows using AI and no-code tools',
+        'Analyze data and generate insights with AI assistance',
+        'Create reports, presentations, and media using AI tools',
+        'Build and present an AI-powered capstone project',
+        'Earn the Praktix AI for Business Certificate',
+      ],
+      level: 'Beginner',
+      rating: 4.7,
+      totalStudents: 930,
+      isFeatured: false,
+      startDate: 'July 1, 2025',
+      tags: ['AI', 'No-code', 'Productivity', 'Business', 'Certificate'],
+    ),
+    Program(
+      id: 'prog_06',
+      title: 'B.Sc. Software Engineering (Full-Stack)',
+      category: 'Technology',
+      duration: '16 weeks',
+      price: 3200,
+      imageUrl:
+          'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=500&fit=crop',
+      description:
+          'The most comprehensive full-stack accelerator available. Learn React, TypeScript, Node.js, '
+          'PostgreSQL, and cloud deployment from a Staff Engineer at Stripe. '
+          '\n\nYou build 6 production applications and graduate as a senior-level engineer in 16 weeks—'
+          'backed by the Praktix Job Guarantee.',
+      expertId: 'exp_06',
+      outcomes: [
+        'Build full-stack applications with React, TypeScript, and Node.js',
+        'Design RESTful APIs and GraphQL services at production scale',
+        'Model relational databases with PostgreSQL',
+        'Deploy to AWS with CI/CD pipelines',
+        'Apply system design principles for scalable architecture',
+        'Graduate job-ready with the Praktix Job Guarantee',
+      ],
+      level: 'Intermediate',
+      rating: 4.9,
+      totalStudents: 2100,
       isFeatured: true,
       startDate: 'June 1, 2025',
-      tags: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'AWS'],
+      tags: ['React', 'Node.js', 'TypeScript', 'AWS', 'Job Guarantee'],
+    ),
+    Program(
+      id: 'prog_07',
+      title: 'Impact Certificate: Sustainability & AI',
+      category: 'Technology',
+      duration: '8 weeks',
+      price: 890,
+      imageUrl:
+          'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&h=500&fit=crop',
+      description:
+          'Explore the intersection of AI and sustainable development. '
+          'This impact-focused certificate applies AI to climate data, ESG reporting, and social impact analysis, '
+          'aligned with UN SDGs. '
+          '\n\nStack it with any Praktix degree for credit recognition, or complete it standalone as a flexible elective.',
+      expertId: 'exp_01',
+      outcomes: [
+        'Apply AI and data science to sustainability challenges',
+        'Analyze climate and ESG data with Python and visualization tools',
+        'Design AI solutions aligned with UN Sustainable Development Goals',
+        'Present impact findings to executives and investors',
+        'Build a personal mission statement to guide your career',
+        'Stack with any Praktix degree for credit',
+      ],
+      level: 'Beginner to Intermediate',
+      rating: 4.8,
+      totalStudents: 620,
+      isFeatured: false,
+      startDate: 'August 1, 2025',
+      tags: ['AI', 'Sustainability', 'UN SDGs', 'ESG', 'Impact'],
+    ),
+    Program(
+      id: 'prog_08',
+      title: 'Executive Leadership Program',
+      category: 'Business',
+      duration: '3 months',
+      price: 4500,
+      imageUrl:
+          'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=500&fit=crop',
+      description:
+          'For senior professionals ready to lead at a new level. '
+          'Develops the mindset, global network, and decision-making skills for C-suite and board-level roles. '
+          '\n\nThrough live sprints, executive coaching, and a global peer cohort, you tackle '
+          'real leadership challenges and graduate with the confidence to drive transformative change.',
+      expertId: 'exp_03',
+      outcomes: [
+        'Lead organisational transformation with clarity and purpose',
+        'Build executive presence and strategic communication skills',
+        'Apply advanced leadership frameworks in real scenarios',
+        'Develop a personal leadership philosophy and 90-day action plan',
+        'Access the Praktix global alumni network of 10,000+ leaders',
+        'Receive the Praktix Executive Leadership Certificate',
+      ],
+      level: 'Advanced',
+      rating: 4.9,
+      totalStudents: 340,
+      isFeatured: false,
+      startDate: 'September 1, 2025',
+      tags: ['Leadership', 'Executive', 'C-Suite', 'Strategy', 'Certificate'],
     ),
   ];
 
