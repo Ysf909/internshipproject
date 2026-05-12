@@ -14,6 +14,14 @@ class Program {
   final bool isFeatured;
   final String startDate;
   final List<String> tags;
+  // 'course' | 'degree' | 'certificate'
+  final String programType;
+  // For degrees: 'Bachelor\'s' | 'Master\'s' | 'MBA' | null
+  final String? degreeType;
+  // ECTS credits for accredited programs
+  final int? ects;
+  // SDG goals this program contributes to
+  final List<String> sdgGoals;
 
   const Program({
     required this.id,
@@ -31,6 +39,10 @@ class Program {
     this.isFeatured = false,
     required this.startDate,
     required this.tags,
+    this.programType = 'course',
+    this.degreeType,
+    this.ects,
+    this.sdgGoals = const [],
   });
 
   factory Program.fromJson(Map<String, dynamic> json) => Program(
@@ -49,6 +61,12 @@ class Program {
         isFeatured: json['isFeatured'] as bool? ?? false,
         startDate: json['startDate'] as String,
         tags: List<String>.from(json['tags'] as List),
+        programType: json['programType'] as String? ?? 'course',
+        degreeType: json['degreeType'] as String?,
+        ects: json['ects'] as int?,
+        sdgGoals: json['sdgGoals'] != null
+            ? List<String>.from(json['sdgGoals'] as List)
+            : const [],
       );
 
   Map<String, dynamic> toJson() => {
@@ -67,8 +85,15 @@ class Program {
         'isFeatured': isFeatured,
         'startDate': startDate,
         'tags': tags,
+        'programType': programType,
+        'degreeType': degreeType,
+        'ects': ects,
+        'sdgGoals': sdgGoals,
       };
 
   String get formattedPrice =>
       price == 0 ? 'Free' : '\$${price.toStringAsFixed(0)}';
+
+  bool get isDegree => programType == 'degree';
+  bool get isCourse => programType == 'course';
 }

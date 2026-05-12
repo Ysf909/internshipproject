@@ -5,99 +5,71 @@ import 'app_colors.dart';
 class AppTextStyles {
   AppTextStyles._();
 
-  // ── Display ─────────────────────────────────────────────
-  static TextStyle displayLarge({Color? color}) => GoogleFonts.poppins(
-        fontSize: 36,
-        fontWeight: FontWeight.w800,
-        color: color ?? AppColors.textPrimaryLight,
-        height: 1.2,
-      );
+  // Display - use Playfair-like via Merriweather for editorial serif feel
+  static TextStyle displayLarge({Color? color}) => GoogleFonts.merriweather(
+    fontSize: 34, fontWeight: FontWeight.w700,
+    color: color ?? AppColors.textPrimaryDark, height: 1.15,
+  );
+  static TextStyle displayMedium({Color? color}) => GoogleFonts.merriweather(
+    fontSize: 26, fontWeight: FontWeight.w700,
+    color: color ?? AppColors.textPrimaryDark, height: 1.2,
+  );
 
-  static TextStyle displayMedium({Color? color}) => GoogleFonts.poppins(
-        fontSize: 28,
-        fontWeight: FontWeight.w700,
-        color: color ?? AppColors.textPrimaryLight,
-        height: 1.25,
-      );
+  // Heading - Syne-style via Nunito for punchy weight
+  static TextStyle headingLarge({Color? color}) => GoogleFonts.syne(
+    fontSize: 22, fontWeight: FontWeight.w700,
+    color: color ?? AppColors.textPrimaryDark, height: 1.3,
+  );
+  static TextStyle headingMedium({Color? color}) => GoogleFonts.syne(
+    fontSize: 18, fontWeight: FontWeight.w700,
+    color: color ?? AppColors.textPrimaryDark, height: 1.35,
+  );
+  static TextStyle headingSmall({Color? color}) => GoogleFonts.syne(
+    fontSize: 15, fontWeight: FontWeight.w600,
+    color: color ?? AppColors.textPrimaryDark, height: 1.4,
+  );
 
-  // ── Heading ─────────────────────────────────────────────
-  static TextStyle headingLarge({Color? color}) => GoogleFonts.poppins(
-        fontSize: 22,
-        fontWeight: FontWeight.w700,
-        color: color ?? AppColors.textPrimaryLight,
-        height: 1.3,
-      );
+  // Body - DM Sans feel via Nunito
+  static TextStyle bodyLarge({Color? color}) => GoogleFonts.dmSans(
+    fontSize: 15, fontWeight: FontWeight.w400,
+    color: color ?? AppColors.textSecondaryDark, height: 1.7,
+  );
+  static TextStyle bodyMedium({Color? color}) => GoogleFonts.dmSans(
+    fontSize: 13, fontWeight: FontWeight.w400,
+    color: color ?? AppColors.textSecondaryDark, height: 1.65,
+  );
+  static TextStyle bodySmall({Color? color}) => GoogleFonts.dmSans(
+    fontSize: 11, fontWeight: FontWeight.w400,
+    color: color ?? AppColors.textSecondaryDark, height: 1.55,
+  );
 
-  static TextStyle headingMedium({Color? color}) => GoogleFonts.poppins(
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
-        color: color ?? AppColors.textPrimaryLight,
-        height: 1.35,
-      );
+  // Label
+  static TextStyle labelLarge({Color? color}) => GoogleFonts.syne(
+    fontSize: 13, fontWeight: FontWeight.w700,
+    color: color ?? AppColors.textPrimaryDark, letterSpacing: 0.1,
+  );
+  static TextStyle labelMedium({Color? color}) => GoogleFonts.syne(
+    fontSize: 11, fontWeight: FontWeight.w700,
+    color: color ?? AppColors.textPrimaryDark, letterSpacing: 0.5,
+  );
+  static TextStyle labelSmall({Color? color}) => GoogleFonts.syne(
+    fontSize: 10, fontWeight: FontWeight.w600,
+    color: color ?? AppColors.textSecondaryDark, letterSpacing: 0.5,
+  );
+  static TextStyle kicker({Color? color}) => GoogleFonts.syne(
+    fontSize: 10, fontWeight: FontWeight.w800,
+    color: color ?? AppColors.primaryLight, letterSpacing: 1.6,
+  );
 
-  static TextStyle headingSmall({Color? color}) => GoogleFonts.poppins(
-        fontSize: 16,
-        fontWeight: FontWeight.w600,
-        color: color ?? AppColors.textPrimaryLight,
-        height: 1.4,
-      );
+  // Price
+  static TextStyle price({Color? color}) => GoogleFonts.syne(
+    fontSize: 20, fontWeight: FontWeight.w800,
+    color: color ?? AppColors.primary,
+  );
 
-  // ── Body ─────────────────────────────────────────────────
-  static TextStyle bodyLarge({Color? color}) => GoogleFonts.inter(
-        fontSize: 16,
-        fontWeight: FontWeight.w400,
-        color: color ?? AppColors.textSecondaryLight,
-        height: 1.6,
-      );
-
-  static TextStyle bodyMedium({Color? color}) => GoogleFonts.inter(
-        fontSize: 14,
-        fontWeight: FontWeight.w400,
-        color: color ?? AppColors.textSecondaryLight,
-        height: 1.6,
-      );
-
-  static TextStyle bodySmall({Color? color}) => GoogleFonts.inter(
-        fontSize: 12,
-        fontWeight: FontWeight.w400,
-        color: color ?? AppColors.textSecondaryLight,
-        height: 1.5,
-      );
-
-  // ── Label ─────────────────────────────────────────────────
-  static TextStyle labelLarge({Color? color}) => GoogleFonts.inter(
-        fontSize: 14,
-        fontWeight: FontWeight.w600,
-        color: color ?? AppColors.textPrimaryLight,
-        letterSpacing: 0.1,
-      );
-
-  static TextStyle labelMedium({Color? color}) => GoogleFonts.inter(
-        fontSize: 12,
-        fontWeight: FontWeight.w600,
-        color: color ?? AppColors.textPrimaryLight,
-        letterSpacing: 0.5,
-      );
-
-  static TextStyle labelSmall({Color? color}) => GoogleFonts.inter(
-        fontSize: 11,
-        fontWeight: FontWeight.w500,
-        color: color ?? AppColors.textSecondaryLight,
-        letterSpacing: 0.5,
-      );
-
-  // ── Price ─────────────────────────────────────────────────
-  static TextStyle price({Color? color}) => GoogleFonts.poppins(
-        fontSize: 20,
-        fontWeight: FontWeight.w700,
-        color: color ?? AppColors.primary,
-      );
-
-  // ── Button ─────────────────────────────────────────────────
-  static TextStyle button({Color? color}) => GoogleFonts.poppins(
-        fontSize: 15,
-        fontWeight: FontWeight.w600,
-        color: color ?? Colors.white,
-        letterSpacing: 0.3,
-      );
+  // Button
+  static TextStyle button({Color? color}) => GoogleFonts.syne(
+    fontSize: 14, fontWeight: FontWeight.w700,
+    color: color ?? Colors.white, letterSpacing: 0.4,
+  );
 }

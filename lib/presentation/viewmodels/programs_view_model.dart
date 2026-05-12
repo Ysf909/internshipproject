@@ -9,6 +9,7 @@ class ProgramsState {
   final List<String> categories;
   final String selectedCategory;
   final String searchQuery;
+  final String selectedType; // 'all' | 'course' | 'degree'
   final bool isLoading;
   final String? error;
 
@@ -18,6 +19,7 @@ class ProgramsState {
     this.categories = const ['All'],
     this.selectedCategory = 'All',
     this.searchQuery = '',
+    this.selectedType = 'all',
     this.isLoading = true,
     this.error,
   });
@@ -28,18 +30,19 @@ class ProgramsState {
     List<String>? categories,
     String? selectedCategory,
     String? searchQuery,
+    String? selectedType,
     bool? isLoading,
     String? error,
-  }) =>
-      ProgramsState(
-        allPrograms: allPrograms ?? this.allPrograms,
-        filteredPrograms: filteredPrograms ?? this.filteredPrograms,
-        categories: categories ?? this.categories,
-        selectedCategory: selectedCategory ?? this.selectedCategory,
-        searchQuery: searchQuery ?? this.searchQuery,
-        isLoading: isLoading ?? this.isLoading,
-        error: error,
-      );
+  }) => ProgramsState(
+    allPrograms: allPrograms ?? this.allPrograms,
+    filteredPrograms: filteredPrograms ?? this.filteredPrograms,
+    categories: categories ?? this.categories,
+    selectedCategory: selectedCategory ?? this.selectedCategory,
+    searchQuery: searchQuery ?? this.searchQuery,
+    selectedType: selectedType ?? this.selectedType,
+    isLoading: isLoading ?? this.isLoading,
+    error: error,
+  );
 }
 
 // ── ViewModel ─────────────────────────────────────────────────────────────────
@@ -76,10 +79,16 @@ class ProgramsViewModel extends StateNotifier<ProgramsState> {
     _applyFilters();
   }
 
+  void onTypeSelected(String type) {
+    state = state.copyWith(selectedType: type);
+    _applyFilters();
+  }
+
   void resetFilters() {
     state = state.copyWith(
       searchQuery: '',
       selectedCategory: 'All',
+      selectedType: 'all',
       filteredPrograms: state.allPrograms,
     );
   }
@@ -87,9 +96,12 @@ class ProgramsViewModel extends StateNotifier<ProgramsState> {
   void _applyFilters() {
     var result = state.allPrograms;
 
+    if (state.selectedType != 'all') {
+      result = result.where((p) => p.programType == state.selectedType).toList();
+    }
+
     if (state.selectedCategory != 'All') {
-      result =
-          result.where((p) => p.category == state.selectedCategory).toList();
+      result = result.where((p) => p.category == state.selectedCategory).toList();
     }
 
     if (state.searchQuery.trim().isNotEmpty) {

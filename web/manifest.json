@@ -1,11 +1,11 @@
 {
-    "name": "Praktix",
+    "name": "Praktix University",
     "short_name": "Praktix",
-    "start_url": "/",
+    "start_url": ".",
     "display": "standalone",
-    "background_color": "#F8F9FE",
-    "theme_color": "#4F46E5",
-    "description": "Professional Skills & Mentorship Platform",
+    "background_color": "#0B0D0F",
+    "theme_color": "#6C63FF",
+    "description": "Build Real Skills. Shape Tomorrow.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
